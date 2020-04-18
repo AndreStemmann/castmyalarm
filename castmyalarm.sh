@@ -27,7 +27,7 @@
 # BASE VARIABLES
 # ===============================================================================
 snek=$(which python)
-s2c="/opt/wecker/stream2chromecast/stream2chromecast.py"
+s2c="/opt/stream2chromecast/stream2chromecast.py"
 user=$(echo $HOME|rev|cut -d"/" -f1|rev)
 room1=""  # Google Chromecast Audio Name here e.g. bedroom
 r1t="5m"  # Given streamtime for bedroom
