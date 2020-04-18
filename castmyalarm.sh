@@ -2,7 +2,7 @@
 #===============================================================================
 #  FILE: castmyalarm.sh
 #  USAGE: ./stream2chromecast/castmyalarm.sh
-#	 USAGE: crontab e.g. 20  9   *   *   1-5 /bin/bash /opt/stream2chromecast/castmyalarm.sh
+#	 USAGE: crontab e.g. 30  7   *   *   1-5 /bin/bash /opt/stream2chromecast/castmyalarm.sh
 #
 #  DESCRIPTION: takes a random radio station stream from your defined array
 #               and streams it to your defined google chromecast audio devices
