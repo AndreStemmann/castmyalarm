@@ -14,7 +14,7 @@
 #         NOTES: Align the rooms to your needs
 #        AUTHOR: Andre Stemmann
 #       CREATED: 18.04.2020
-#      REVISION: v0.1
+#      REVISION: v0.3
 #===============================================================================
 
 # ===============================================================================
@@ -63,15 +63,13 @@ devicecheck () {
     for i in "${devices[@]}";
     do
         if [[ $i == *"${room1}"* ]]; then
-            python ${s2c} -devicename ${room1} -status
-            if [ $? -ne "0" ]; then STATUS_ROOM1="1"; else STATUS_ROOM1="0"; fi
+            if ! python ${s2c} -devicename ${room1} -status; then STATUS_ROOM1="1"; else STATUS_ROOM1="0"; fi
         else
             STATUS_ROOM1="1"
         fi
         sleep 5s
         if [[ $i == *"${room2}"* ]]; then
-            python ${s2c} -devicename ${room2} -status
-            if [ $? -ne "0" ]; then STATUS_ROOM2="1" ; else STATUS_ROOM2="0";  fi
+            if ! python ${s2c} -devicename ${room2} -status; then STATUS_ROOM2="1" ; else STATUS_ROOM2="0";  fi
         else
             STATUS_ROOM2="1"
         fi
